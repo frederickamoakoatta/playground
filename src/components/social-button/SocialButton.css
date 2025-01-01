@@ -1,0 +1,9 @@
+@import url("../button/Button.css");
+
+.btn-social-light {
+    border : 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.btn-social-dark {
+    border : 1px solid rgb(246, 246, 246);
+}
