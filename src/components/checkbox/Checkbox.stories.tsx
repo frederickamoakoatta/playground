@@ -7,7 +7,7 @@ const meta: Meta = {
     component : Checkbox,
     args : {
         label: 'label',
-        onchange : fn()
+        onChange : fn()
     },
     argTypes :  {
         hasLabel : {

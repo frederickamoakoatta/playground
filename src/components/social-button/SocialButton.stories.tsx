@@ -2,16 +2,14 @@ import {Meta, StoryObj} from "@storybook/react";
 import {fn} from "@storybook/test";
 import SocialButton from "./SocialButton.tsx";
 import btnIcon from "../../assets/send.svg";
-import '/SocialButton.css';
+import './SocialButton.css';
 
 const meta : Meta = {
     title: "Button",
     component: SocialButton,
     args : {
         onClick : fn(),
-        children : <div className={'v-stack'}
-                        // style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}
-        >
+        children : <div className={'h-stack'}>
             <img src={btnIcon} alt={'button icon'} width={'16px'} height={'16px'} style={{paddingRight: '4px'}}/>
             Button
         </div>
