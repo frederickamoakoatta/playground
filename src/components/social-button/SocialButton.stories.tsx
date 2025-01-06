@@ -28,17 +28,11 @@ type Story = StoryObj<typeof SocialButton>;
 export const SocialLoginButton : Story  = {
     args :  {
         type : 'login'
-    },
-    render : (args) => {
-        return <SocialButton {...args}/>
     }
 }
 
 export const CTAButton : Story  = {
     args :  {
         type : 'CTA'
-    },
-    render : (args) => {
-        return <SocialButton {...args}/>
     }
 }

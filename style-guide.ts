@@ -3,6 +3,7 @@ const Colors  = {
     'orange': '#FD7E14',
     'black' : '#1E1E1E',
     'purple' : '#6610F2',
+    'white': '#FFFFFF',
     'btn' : {
         'primary': '#0D6EFD',
         'secondary': '#6610F2',

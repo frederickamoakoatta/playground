@@ -25,29 +25,23 @@ type Story = StoryObj<typeof Button>;
 export const PrimaryButton : Story  = {
     args : {
         state: 'primary',
-    },
-    render : (args) => {
-        return <Button {...args}/>
     }
 }
 
 export const SecondaryButton : Story  = {
     args : {
-        ...PrimaryButton.args,
         state: "secondary"
     }
 }
 
 export const SuccessButton : Story  = {
     args : {
-        ...PrimaryButton.args,
         state: "success"
     }
 }
 
 export const WarningButton : Story  = {
     args : {
-        ...PrimaryButton.args,
         state: "warning"
     }
 }
@@ -55,21 +49,18 @@ export const WarningButton : Story  = {
 
 export const DangerButton : Story  = {
     args : {
-        ...PrimaryButton.args,
         state: "danger"
     }
 }
 
 export const NeutralButton : Story  = {
     args : {
-        ...PrimaryButton.args,
         state: "neutral"
     }
 }
 
 export const DarkButton : Story  = {
     args : {
-        ...PrimaryButton.args,
         state: "dark"
     }
 }
