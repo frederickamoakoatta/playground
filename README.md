@@ -108,13 +108,13 @@ This will output a static version of your Storybook under the `storybook-static`
 Run unit tests:
 
 ```bash
-  npm test
+  npm tests
 ```
 
 or
 
 ```bash
-  yarn test
+  yarn tests
 ```
 
 For visual regression testing with Chromatic:
