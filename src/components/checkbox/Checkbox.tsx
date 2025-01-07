@@ -1,4 +1,4 @@
-import './Checkbox.css';
+import  "./Checkbox.scss";
 
 interface CheckboxProps {
     label? : string,
@@ -6,11 +6,12 @@ interface CheckboxProps {
     hasLabel? : boolean,
 }
 
-const Checkbox = ({hasLabel, label, onChange} : CheckboxProps)=>{
+const Checkbox = ({hasLabel, label, onChange} : CheckboxProps) => {
     return (
         <>
-            <div className={'h-stack'}>
+            <div className={'mini-stack'}>
                 <input type={"checkbox"} onChange={onChange}/>
+                <span className={'spaceBtw'}/>
                 {hasLabel && <label htmlFor={'label'}>{label}</label>}
             </div>
         </>

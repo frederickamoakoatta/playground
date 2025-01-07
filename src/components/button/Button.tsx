@@ -1,5 +1,5 @@
-import Colors from "../../../style-guide.ts";
-import './Button.css';
+import './Button.scss';
+import colorPallet from '../../exports.module.scss';
 
 
 interface ButtonProps {
@@ -14,14 +14,14 @@ const Button = ({state, onClick, children}: ButtonProps) => {
         <>
             <button className={'btn'}
                     style={{
-                        backgroundColor: state === 'primary' ? Colors.btn.primary :
-                            state === 'secondary' ? Colors.btn.secondary :
-                                state === 'success' ? Colors.btn.success :
-                                    state === 'warning' ? Colors.btn.warning :
-                                        state === 'danger' ? Colors.btn.danger :
-                                            state === 'neutral' ? Colors.btn.neutral : Colors.btn.dark,
-                        color: state === 'neutral' ? Colors.text.black :
-                            state === 'warning' ? Colors.text.black : Colors.text.white
+                        backgroundColor: state === 'primary' ? colorPallet.btnPrimary :
+                            state === 'secondary' ? colorPallet.btnSecondary :
+                                state === 'success' ? colorPallet.btnSuccess :
+                                    state === 'warning' ? colorPallet.btnWarning :
+                                        state === 'danger' ? colorPallet.btnDanger :
+                                            state === 'neutral' ? colorPallet.btnNeutral : colorPallet.btnDark,
+                        color: state === 'neutral' ? colorPallet.textBlack :
+                            state === 'warning' ? colorPallet.textBlack : colorPallet.textWhite
                     }} onClick={onClick}>{children}</button>
         </>
     )

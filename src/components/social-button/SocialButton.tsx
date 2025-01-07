@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import './SocialButton.css'
+import './SocialButton.scss'
 
 interface SocialButtonProps {
     type : 'login' | 'CTA',

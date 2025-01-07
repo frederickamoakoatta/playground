@@ -1,0 +1,43 @@
+@use "sass:map";
+@use "../../variables" as variables;
+@use "../../general";
+
+.toggle-container {
+    @extend .h-stack;
+    justify-content: flex-start;
+}
+
+.toggle {
+    width: 50px;
+    height: 25px;
+    background-color: map.get(variables.$colors, grey);
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &::before {
+        content: "";
+        width: map.get(variables.$ptn-grid, '24pt');
+        height: map.get(variables.$ptn-grid, '24pt');
+        background-color: map.get(variables.$colors, white);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 1px;
+        transform: translateY(-50%);
+        transition: left 0.3s ease;
+    }
+
+    &.active {
+        background-color: #4caf50;
+    }
+
+    &.active::before {
+        left: 25px;
+    }
+}
+
+.label {
+    margin-left: 8px;
+}

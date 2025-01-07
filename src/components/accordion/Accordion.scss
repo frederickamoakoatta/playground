@@ -1,0 +1,39 @@
+@use 'sass:map';
+@use '../../variables' as  vars;
+
+.accordion {
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid map.get(vars.$colors, grey);
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background-color: map.get(vars.$colors, white);
+    border-bottom: 1px solid map.get(vars.$colors, grey);
+    color: map.get(vars.$text-colors, black);
+    padding: map.get(vars.$ptn-grid, '16pt');
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: map.get(vars.$colors, grey);
+}
+
+.accordion-content {
+    padding: map.get(vars.$ptn-grid, '16pt');
+    background-color: map.get(vars.$colors, white);
+    display: none;
+}
+
+.accordion-content.active {
+    display: block;
+}

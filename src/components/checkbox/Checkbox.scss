@@ -1,0 +1,8 @@
+@use "../../general" as general;
+
+.mini-stack {
+  @extend .h-stack;
+  justify-content: flex-start;
+}
+
+

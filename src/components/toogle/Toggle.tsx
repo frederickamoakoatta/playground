@@ -1,4 +1,4 @@
-import './Toggle.css';
+import './Toggle.scss';
 import {useState} from "react";
 
 interface ToggleProps {

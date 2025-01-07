@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "../../variables" as variables;
+@use "../../general";
+@use "../button/Button";
+
+.btn-social-light {
+    border : 1px solid map.get(variables.$colors, dark);
+}
+
+.btn-social-dark {
+    border : 1px solid map.get(variables.$colors, grey);
+}

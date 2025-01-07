@@ -3,7 +3,7 @@ import Toggle from "./Toggle.tsx";
 
 
 const meta : Meta = {
-    title : 'Toggle',
+    title : 'Input Controls/Toggle',
     component : Toggle
 }
 export default meta;

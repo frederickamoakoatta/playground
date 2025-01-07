@@ -1,7 +1,7 @@
-import './Header.css';
+import './Header.scss';
 import {ReactNode} from "react";
-import logo from '../../assets/Freddy_logo.svg'
-import Colors from "../../../style-guide.ts";
+import logo from '../../assets/Freddy_logo.svg';
+import colorPallet from "../../exports.module.scss";
 
 interface HeaderProps {
     mode: 'white' | 'transparent' | 'translucent',
@@ -13,17 +13,17 @@ interface HeaderProps {
 const Header = ({mode, hasActions, navActions, navItems}: HeaderProps) => {
     return (
         <>
-            <header className="header" style={{backgroundColor : mode === 'white' ? Colors.white : mode === 'translucent' ? 'rgba(0, 0, 0, 0.38)' : 'rgba(0, 0, 0, 0)'}}>
+            <header className="header" style={{backgroundColor : mode === 'white' ? colorPallet.white : mode === 'translucent' ? colorPallet.translucent : colorPallet.transparent}}>
                 <div>
                     <img className="logo" src={logo} color={'black'} alt={'Freddy logo'}/>
                 </div>
                 <nav className="nav">
                     {navItems.map((item, i) => typeof item === 'string' ?
-                        <a href="#" style={{color : mode === 'white' ? Colors.text.black : Colors.text.white}} key={`nav_${i}`}>{item}</a> : item)}
+                        <a href="#" style={{color : mode === 'white' ? colorPallet.textDark : colorPallet.textWhite}} key={`nav_${i}`}>{item}</a> : item)}
                 </nav>
                 {
                     hasActions &&
-                    <div className="actions">
+                    <div className="h-stack">
                         {navActions}
                     </div>
                 }

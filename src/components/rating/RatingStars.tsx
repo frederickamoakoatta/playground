@@ -1,4 +1,4 @@
-import './RatingStars.css';
+import './RatingStars.scss';
 import {useEffect, useReducer} from "react";
 import ratingReducer from "./RatingReducer.ts";
 
@@ -35,7 +35,6 @@ const RatingStars = ({rate}: RatingStarsProps) => {
 
     useEffect(() => {
         dispatch({type: rate})
-        console.log('RATING_STARS', rate)
     }, [rate])
 
     return (

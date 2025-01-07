@@ -1,4 +1,4 @@
-import './Accordion.css';
+import './Accordion.scss';
 import {useState} from 'react';
 
 interface AccordionProps {

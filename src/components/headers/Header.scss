@@ -1,0 +1,58 @@
+@use "sass:map";
+@use "../../variables" as vars;
+@use "../../general";
+
+.header {
+    @extend .h-stack;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.nav {
+    @extend .h-stack;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav a {
+    color: map.get(vars.$text-colors, black);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: map.get(vars.$text-colors, primary);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.header-icons {
+    width: map.get(vars.$ptn-grid, '24pt');
+}
+
+.header-avatar {
+    width: map.get(vars.$ptn-grid, '32pt');
+    height: map.get(vars.$ptn-grid, '32pt');
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: map.get(vars.$colors, black);
+    }
+}

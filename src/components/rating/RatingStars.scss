@@ -1,0 +1,25 @@
+@use "sass:map";
+@use "../../variables" as vars;
+@use "../../general";
+
+.rating {
+    @extend .h-stack;
+    justify-content: flex-start;
+}
+
+.rate {
+    font-size: 1.6rem;
+    padding: 2px;
+    color: map.get(vars.$colors, grey);
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+        color: map.get(vars.$colors, orange);
+    }
+}
+
+
+.active {
+    color: map.get(vars.$colors, orange);
+}

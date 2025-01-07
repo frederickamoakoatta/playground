@@ -1,0 +1,21 @@
+@use "sass:map";
+@use 'variables' as vars;
+
+:export {
+  white : map-get(vars.$colors, white);
+  grey : map-get(vars.$colors, grey);
+  dark : map-get(vars.$colors, dark);
+  danger : map-get(vars.$colors, danger);
+  translucent : map-get(vars.$colors, translucent);
+  transparent : map-get(vars.$colors, transparent);
+  btnPrimary : map-get(vars.$btn-colors, primary);
+  btnSecondary : map-get(vars.$btn-colors, secondary);
+  btnSuccess : map-get(vars.$btn-colors, success);
+  btnWarning : map-get(vars.$btn-colors, warning);
+  btnDanger : map-get(vars.$btn-colors, danger);
+  btnNeutral : map-get(vars.$btn-colors, neutral);
+  btnDark : map-get(vars.$btn-colors, dark);
+  textPrimary : map-get(vars.$text-colors, dark);
+  textDark : map-get(vars.$text-colors, black);
+  textWhite : map-get(vars.$text-colors, white);
+}

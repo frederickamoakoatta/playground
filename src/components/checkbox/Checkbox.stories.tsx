@@ -3,7 +3,7 @@ import Checkbox from "./Checkbox";
 import {fn} from "@storybook/test";
 
 const meta: Meta = {
-    title : 'Checkbox',
+    title : 'Input Controls/Checkbox',
     component : Checkbox,
     args : {
         label: 'label',

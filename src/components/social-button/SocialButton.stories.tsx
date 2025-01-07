@@ -2,7 +2,7 @@ import {Meta, StoryObj} from "@storybook/react";
 import {fn} from "@storybook/test";
 import SocialButton from "./SocialButton.tsx";
 import btnIcon from "../../assets/send.svg";
-import './SocialButton.css';
+import './SocialButton.scss';
 
 const meta : Meta = {
     title: "Button",

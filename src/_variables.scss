@@ -1,0 +1,46 @@
+@use "sass:map";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$font-stack: 'Lato', sans-serif;
+
+$colors: (
+        pink : #DD5498,
+        orange: #FD7E14,
+        black : #1E1E1E,
+        dark : rgba(0, 0, 0, 0.47),
+        purple : #6610F2,
+        white: #FFFFFF,
+        grey: #E0E0E0,
+        danger: #E25563,
+        translucent: rgba(0, 0, 0, 0.38),
+        transparent: rgba(0, 0, 0, 0),
+);
+
+$btn-colors: (
+        primary: #0D6EFD,
+        secondary: #6610F2,
+        success: #0c6100,
+        warning: #FFC107,
+        danger: #E25563,
+        neutral: #E9ECEF,
+        dark: #1E1E1E,
+);
+
+$text-colors: (
+        primary: #0D6EFD,
+        black: #1E1E1E,
+        white: #FFFFFF,
+);
+
+$ptn-grid: (
+        '4pt' : 4px,
+        '8pt' : 8px,
+        '12pt' : 12px,
+        '16pt' : 16px,
+        '24pt' : 24px,
+        '32pt' : 32px,
+        '40pt' : 40px,
+        '48pt' : 48px,
+        '56pt' : 56px,
+        '64pt' : 64px,
+);

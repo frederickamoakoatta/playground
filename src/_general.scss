@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use "variables" as vars;
+
+@mixin stack($direction, $justify-val) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: $justify-val;
+}
+
+.v-stack {
+  @include stack(column, center);
+}
+
+.h-stack {
+  @include stack(row, space-around);
+}
+
+.spaceBtw {
+  padding: map.get(vars.$ptn-grid, '4pt');
+}
