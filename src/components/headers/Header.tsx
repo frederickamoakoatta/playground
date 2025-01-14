@@ -13,7 +13,7 @@ interface HeaderProps {
 const Header = ({mode, hasActions, navActions, navItems}: HeaderProps) => {
     return (
         <>
-            <header className="header" style={{backgroundColor : mode === 'white' ? colorPallet.white : mode === 'translucent' ? colorPallet.translucent : colorPallet.transparent}}>
+            <header className="header" aria-label={'header'} style={{backgroundColor : mode === 'white' ? colorPallet.white : mode === 'translucent' ? colorPallet.translucent : colorPallet.transparent}}>
                 <div>
                     <img className="logo" src={logo} color={'black'} alt={'Freddy logo'}/>
                 </div>
@@ -23,7 +23,7 @@ const Header = ({mode, hasActions, navActions, navItems}: HeaderProps) => {
                 </nav>
                 {
                     hasActions &&
-                    <div className="h-stack">
+                    <div className="h-stack" aria-label={'actions'}>
                         {navActions}
                     </div>
                 }

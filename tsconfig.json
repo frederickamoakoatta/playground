@@ -16,8 +16,6 @@
     "types": ["jest", "node", "@testing-library/jest-dom"],
     "paths": {
       "@/*": ["src/*"]
-    },
-    "include": ["src", ".storybook"],
-    "exclude": ["node_modules"]
+    }
   }
 }

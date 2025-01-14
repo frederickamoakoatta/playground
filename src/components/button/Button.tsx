@@ -3,7 +3,7 @@ import colorPallet from '../../exports.module.scss';
 
 
 interface ButtonProps {
-    state?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'neutral' | 'dark',
+    state: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'neutral' | 'dark',
     onClick?: () => void,
     children: string,
 }

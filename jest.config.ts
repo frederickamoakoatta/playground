@@ -4,6 +4,7 @@ const config: Config = {
     testEnvironment: 'jsdom', // Use jsdom for DOM-related tests
     transform: {
         '^.+\\.tsx?$': 'ts-jest', // Transform TypeScript files with ts-jest
+        "\\.svg$": "jest-transform-stub"
     },
     moduleNameMapper: {
         '\\.(css|scss|sass|less)$': 'identity-obj-proxy', // Mock CSS imports

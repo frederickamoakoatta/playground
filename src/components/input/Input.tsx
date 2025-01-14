@@ -11,13 +11,13 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 const Input = ({label, error, placeholder, type, ...props}: InputProps) => {
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        console.log(label, event.target.value);
+        console.log(event.target.value);
     };
 
     return (
         <>
             <div className={'input-container'}>
-                {label && <label htmlFor={props.id || props.name}>{label}</label>}
+                {label && <label htmlFor={props.id || props.name} aria-label={label}>{label}</label>}
                 <input
                     {...props}
                     type={type}

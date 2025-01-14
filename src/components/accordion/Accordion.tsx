@@ -12,8 +12,8 @@ const Accordion = ({header, content} : AccordionProps) => {
         <>
             <div className="accordion">
                 <div className="accordion-item">
-                    <div className="accordion-header" onClick={() => setIsOpen(!isOpen)}>{header}</div>
-                    <div className={isOpen ? "accordion-content active": "accordion-content"}>{content}</div>
+                    <div aria-label={'accordion header'} className="accordion-header" onClick={() => setIsOpen(!isOpen)}>{header}</div>
+                    {isOpen && <div aria-label={'accordion content'} className="accordion-content">{content}</div>}
                 </div>
             </div>
         </>

@@ -1,6 +1,6 @@
 import './RatingStars.scss';
 import {useEffect, useReducer} from "react";
-import ratingReducer from "./RatingReducer.ts";
+import ratingReducer from "./RatingReducer";
 
 export enum RATING_STARS {
     SET_RATING_STARS_0 = 'SET_RATING_STARS_0',
@@ -20,7 +20,7 @@ export type RatesType = {
 }
 
 interface RatingStarsProps {
-    rate: RATING_STARS;
+    rate?: RATING_STARS;
 }
 
 
@@ -34,29 +34,29 @@ const RatingStars = ({rate}: RatingStarsProps) => {
     }
 
     useEffect(() => {
-        dispatch({type: rate})
+        dispatch({type: rate ?? RATING_STARS.SET_RATING_STARS_0})
     }, [rate])
 
     return (
         <>
             <div className="rating">
-                <span className={currentRate.star1 ? 'rate active' : 'rate'}
+                <span aria-label={'star1'} className={currentRate.star1 ? 'rate active' : 'rate'}
                           onClick={() => setRating(RATING_STARS.SET_RATING_STARS_1)}>&#9733;</span>
 
 
-                <span className={currentRate.star2 ? 'rate active' : 'rate'}
+                <span aria-label={'star2'} className={currentRate.star2 ? 'rate active' : 'rate'}
                       onClick={() => setRating(RATING_STARS.SET_RATING_STARS_2)}>&#9733;</span>
 
 
-                <span className={currentRate.star3 ? 'rate active' : 'rate'}
+                <span aria-label={'star3'} className={currentRate.star3 ? 'rate active' : 'rate'}
                       onClick={() => setRating(RATING_STARS.SET_RATING_STARS_3)}>&#9733;</span>
 
 
-                <span className={currentRate.star4 ? 'rate active' : 'rate'}
+                <span aria-label={'star4'} className={currentRate.star4 ? 'rate active' : 'rate'}
                       onClick={() => setRating(RATING_STARS.SET_RATING_STARS_4)}>&#9733;</span>
 
 
-                <span className={currentRate.star5 ? 'rate active' : 'rate'}
+                <span aria-label={'star5'} className={currentRate.star5 ? 'rate active' : 'rate'}
                       onClick={() => setRating(RATING_STARS.SET_RATING_STARS_5)}>&#9733;</span>
 
             </div>

@@ -1,4 +1,4 @@
-import {RatesType, RATING_STARS} from "./RatingStars.tsx";
+import {RatesType, RATING_STARS} from "./RatingStars";
 
 const ratingReducer = (state: RatesType, action: { type: RATING_STARS }) => {
     switch (action.type) {
