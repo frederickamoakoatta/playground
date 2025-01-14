@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use '../../variables' as vars;
+@use '../../general';
+
+.app-v-stack {
+  @extend .v-stack;
+  height: 100vh;
+}
+
+.app-h-stack {
+  @extend .h-stack;
+}

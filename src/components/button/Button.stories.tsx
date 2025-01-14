@@ -1,6 +1,7 @@
 import {Meta, StoryObj} from "@storybook/react";
 import Button from "./Button.tsx";
 import {fn} from "@storybook/test";
+import ButtonColors from "./ButtonColors";
 
 
 const meta : Meta = {
@@ -12,7 +13,7 @@ const meta : Meta = {
     },
     argTypes : {
         state : {
-            options: ["primary", "secondary", "success", "warning", "danger", "neutral", "dark"],
+            options: ["primary", "secondary", "success", "warning", "danger", "neutral", "dark", 'disabled'],
             control: 'select'
         }
     }
@@ -24,44 +25,50 @@ type Story = StoryObj<typeof Button>;
 
 export const PrimaryButton : Story  = {
     args : {
-        state: 'primary',
+        state: ButtonColors.primary,
     }
 }
 
 export const SecondaryButton : Story  = {
     args : {
-        state: "secondary"
+        state: ButtonColors.secondary
     }
 }
 
 export const SuccessButton : Story  = {
     args : {
-        state: "success"
+        state: ButtonColors.success,
     }
 }
 
 export const WarningButton : Story  = {
     args : {
-        state: "warning"
+        state: ButtonColors.warning
     }
 }
 
 
 export const DangerButton : Story  = {
     args : {
-        state: "danger"
+        state: ButtonColors.danger
     }
 }
 
 export const NeutralButton : Story  = {
     args : {
-        state: "neutral"
+        state: ButtonColors.neutral
     }
 }
 
 export const DarkButton : Story  = {
     args : {
-        state: "dark"
+        state: ButtonColors.dark
     }
 }
 
+
+export const DisabledButton : Story  = {
+    args : {
+        state: ButtonColors.disabled
+    }
+}

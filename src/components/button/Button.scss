@@ -4,7 +4,12 @@
 .btn {
     width: auto;
     height: auto;
-    padding: map.get(vars.$ptn-grid, '8pt')  map.get(vars.$ptn-grid, '24pt');
+    padding: map.get(vars.$ptn-grid, '12pt')  map.get(vars.$ptn-grid, '24pt');
     border: none;
     border-radius: map.get(vars.$ptn-grid, '4pt');
+    cursor: pointer;
+
+    &-link {
+        text-decoration: none;
+    }
 }

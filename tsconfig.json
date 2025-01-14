@@ -13,9 +13,6 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "jsx": "react-jsx",
-    "types": ["jest", "node", "@testing-library/jest-dom"],
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "types": ["jest", "node", "@testing-library/jest-dom"]
   }
 }

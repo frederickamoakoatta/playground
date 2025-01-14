@@ -15,8 +15,10 @@
   btnWarning : map-get(vars.$btn-colors, warning);
   btnDanger : map-get(vars.$btn-colors, danger);
   btnNeutral : map-get(vars.$btn-colors, neutral);
+  btnDisabled : map-get(vars.$btn-colors, disabled);
   btnDark : map-get(vars.$btn-colors, dark);
   textPrimary : map-get(vars.$text-colors, dark);
   textDark : map-get(vars.$text-colors, black);
   textWhite : map-get(vars.$text-colors, white);
+  textDisabled : map-get(vars.$text-colors, disabled);
 }
