@@ -1,15 +1,24 @@
 @use 'sass:map';
 @use '../../variables' as vars;
 
-.btn {
+@mixin baseBtn {
     width: auto;
     height: auto;
     padding: map.get(vars.$ptn-grid, '12pt')  map.get(vars.$ptn-grid, '24pt');
     border: none;
     border-radius: map.get(vars.$ptn-grid, '4pt');
     cursor: pointer;
+}
+
+.btn {
+    @include baseBtn;
 
     &-link {
         text-decoration: none;
+    }
+
+    &-full {
+        @include baseBtn;
+        width: 100%;
     }
 }

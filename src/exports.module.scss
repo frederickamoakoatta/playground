@@ -5,10 +5,13 @@
 :export {
   white : map-get(vars.$colors, white);
   grey : map-get(vars.$colors, grey);
+  black : map-get(vars.$colors, black);
+  pink : map-get(vars.$colors, pink);
   dark : map-get(vars.$colors, dark);
   danger : map-get(vars.$colors, danger);
   translucent : map-get(vars.$colors, translucent);
   transparent : map-get(vars.$colors, transparent);
+  lightGrey : map-get(vars.$colors, lightGrey);
   btnPrimary : map-get(vars.$btn-colors, primary);
   btnSecondary : map-get(vars.$btn-colors, secondary);
   btnSuccess : map-get(vars.$btn-colors, success);

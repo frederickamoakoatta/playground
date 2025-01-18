@@ -7,5 +7,6 @@ enum ButtonColors {
     neutral = 'neutral',
     dark = 'dark',
     disabled = 'disabled',
+    transparent = 'transparent',
 }
 export default ButtonColors;

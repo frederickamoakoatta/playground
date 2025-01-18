@@ -13,7 +13,7 @@ const meta : Meta = {
     },
     argTypes : {
         state : {
-            options: ["primary", "secondary", "success", "warning", "danger", "neutral", "dark", 'disabled'],
+            options: ["primary", "secondary", "success", "warning", "danger", "neutral", "dark", 'disabled', 'transparent'],
             control: 'select'
         }
     }
@@ -70,5 +70,16 @@ export const DarkButton : Story  = {
 export const DisabledButton : Story  = {
     args : {
         state: ButtonColors.disabled
+    }
+}
+
+export const TransparentButton : Story  = {
+    parameters: {
+        backgrounds: {
+            default: 'Dark',
+        },
+    },
+    args : {
+        state: ButtonColors.transparent
     }
 }

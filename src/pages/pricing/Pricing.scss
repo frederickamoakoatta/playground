@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '../../variables' as vars;
+@use '../../general';
+
+.hero-heading-black {
+  color: map.get(vars.$colors, black);
+  text-align: center;
+}
+
+.pricing {
+  @extend .v-stack;
+  padding: 0 150px;
+  margin: 4em 0;
+}
+
+.card-group {
+  @extend .h-stack;
+  justify-content: space-evenly;
+  width: 100%;
+}
+

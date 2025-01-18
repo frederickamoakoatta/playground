@@ -5,7 +5,7 @@
 .header {
     @extend .h-stack;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 150px;
 }
 
 .logo {
@@ -55,4 +55,11 @@
         font-size: 1.5rem;
         color: map.get(vars.$colors, black);
     }
+}
+
+
+.btn-v-stack {
+    @extend .v-stack;
+    align-items: flex-start;
+    margin:  0;
 }

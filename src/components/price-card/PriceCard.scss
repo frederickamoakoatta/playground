@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use '../../variables' as vars;
+@use '../../general';
+
+.price-card-icons {
+  width: 16px;
+  height: 16px;
+}
+
+
+.price-card {
+  @extend .v-stack;
+  align-items: flex-start;
+  background-color: map.get(vars.$colors, lightGrey);
+  padding: 16px 32px;
+  width: 280px;
+  border-radius: 16px;
+
+  &-heading {
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+  }
+
+  &-group {
+    @extend .h-stack;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-sub-group {
+    @extend .h-stack;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &-name {
+    font-size: 1.25em;
+    font-weight: 600;
+  }
+
+  &-price {
+    font-size: 2em;
+  }
+}

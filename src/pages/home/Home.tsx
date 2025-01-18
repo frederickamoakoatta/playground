@@ -17,9 +17,7 @@ const Home = () => {
     const options : Array<LinksType> =  useMemo(() => {
         return [
             { value: '/hero-1', label: 'Hero page 1' },
-            { value: '/hero-2', label: 'Hero page 2' },
-            { value: '/hero-3', label: 'Hero page 3' },
-            { value: '/hero-4', label: 'Hero page 4' },
+            { value: '/hero-2?theme=dark', label: 'Hero page 2' },
             { value: '/pricing', label: 'Pricing page' },
             { value: '/product', label: 'Product page' },
             { value: '/login-1', label: 'Login page 1' },

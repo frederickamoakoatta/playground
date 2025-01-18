@@ -2,20 +2,23 @@ import './Button.scss';
 import colorPallet from '../../exports.module.scss';
 import ButtonColors from "./ButtonColors";
 import {Link} from "react-router-dom";
+import {ReactNode} from "react";
 
 
 interface ButtonProps {
     state: ButtonColors,
     onClick?: () => void,
-    children: string,
+    children: ReactNode,
     isDisabled?: boolean,
     isLink?: boolean,
     link? : string,
+    isFullWidth?: boolean,
 }
 
 interface ButtonState {
     backgroundColor: string,
     color: string,
+    border?: string,
 }
 
 const buttonState = (state: ButtonState, action: ButtonColors) => {
@@ -36,19 +39,21 @@ const buttonState = (state: ButtonState, action: ButtonColors) => {
             return {...state, backgroundColor: colorPallet.btnDark, color: colorPallet.textWhite};
         case ButtonColors.disabled:
             return {...state, backgroundColor: colorPallet.btnDisabled, color: colorPallet.textDisabled};
+        case ButtonColors.transparent:
+            return {...state, backgroundColor: colorPallet.transparent, color: colorPallet.textWhite, border: `1px solid ${colorPallet.white}`};
         default:
             return state;
     }
 }
 
-const Button = ({state, onClick, isDisabled, isLink, link, children}: ButtonProps) => {
+const Button = ({state, onClick, isDisabled, isLink, link, children, isFullWidth}: ButtonProps) => {
     return (
         <>
             {
                 isLink ?
                     <Link aria-label={'link'} className={'btn btn-link'} to={link ?? ''}
                        style={buttonState({backgroundColor: colorPallet.btnPrimary, color: colorPallet.textWhite}, state)}>{children}</Link> :
-                    <button className={'btn'} disabled={isDisabled}
+                    <button className={isFullWidth ? 'btn-full' : 'btn'} disabled={isDisabled}
                             style={buttonState({backgroundColor: colorPallet.btnPrimary, color: colorPallet.textWhite}, state)}
                             onClick={onClick}>{children}</button>
             }

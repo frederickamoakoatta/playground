@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '../../variables' as vars;
+@use '../../general';
+
+
+.badge {
+  background-color: map.get(vars.$colors, pink);
+  color: map.get(vars.$text-colors, white);
+  padding: 0.45em 1em;
+  border-radius: map.get(vars.$ptn-grid, '4pt');
+  display: inline-block;
+  cursor: default;
+  transition: transform 0.2s ease;
+  font-size: map.get(vars.$ptn-grid, '12pt');
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
