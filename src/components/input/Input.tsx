@@ -16,7 +16,6 @@ const Input = ({label, error, placeholder, type, ...props}: InputProps) => {
 
     return (
         <>
-            <div className={'input-container'}>
                 {label && <label htmlFor={props.id || props.name} aria-label={label}>{label}</label>}
                 <input
                     {...props}
@@ -26,7 +25,6 @@ const Input = ({label, error, placeholder, type, ...props}: InputProps) => {
                     onChange={handleChange}
                 />
                 {error && <span className="error-message">{error}</span>}
-            </div>
         </>
     )
 }

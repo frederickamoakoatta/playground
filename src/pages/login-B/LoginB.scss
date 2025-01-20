@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use '../../variables' as vars;
+@use '../../general';
+
+.login-B {
+  @extend .v-stack;
+  background: #0575E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+  background: linear-gradient(to right, #021B79, #0575E6);
+  width: 100vw;
+  height: 100vh;
+
+  &-left {
+    width: 50vw;
+    height: 100vh;
+  }
+
+  &-right {
+    @extend .v-stack;
+    width: 50vw;
+    padding : 4em;
+  }
+
+  &-main {
+    @extend .v-stack;
+    background-color: map-get(vars.$colors, lightGrey);
+    padding: 60px 0px;
+    width: 400px;
+    border-radius: 16px;
+  }
+}
+
+
+
+

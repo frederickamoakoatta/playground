@@ -2,25 +2,18 @@
 @use "../../variables" as variables;
 @use "../../general";
 
-.input-container {
-  @extend .v-stack;
-  margin-bottom: 1rem;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
 label {
   font-size: 0.9rem;
-  margin-bottom: 0.5rem;
   color: map.get(variables.$text-colors, black);
+  display: block;
 }
 
 .input {
-  width: 20%;
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid map.get(variables.$colors, grey);
   border-radius: 4px;
+  margin-top: 0.5em;
 
   &-error {
     border-color: map.get(variables.$colors, danger);
@@ -32,4 +25,5 @@ label {
   color: map.get(variables.$colors, danger);
   font-size: 0.8rem;
   margin-top: 0.3rem;
+  display: block;
 }

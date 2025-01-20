@@ -11,7 +11,7 @@ const Checkbox = ({hasLabel, label, onChange} : CheckboxProps) => {
         <>
             <div className={'mini-stack'}>
                 <input type={"checkbox"} onChange={onChange}/>
-                <span className={'spaceBtw'}/>
+                <span className={'spaceBtwMini'}/>
                 {hasLabel && <label htmlFor={label} aria-label={label}>{label}</label>}
             </div>
         </>

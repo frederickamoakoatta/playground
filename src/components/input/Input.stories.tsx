@@ -7,7 +7,7 @@ const meta : Meta = {
     args : {
         label : 'Input Label',
         placeholder : 'Enter some text',
-        type: 'text',
+        type: 'text'
     },
     argTypes : {
         error : {
