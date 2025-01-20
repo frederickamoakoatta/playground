@@ -1,6 +1,6 @@
 import {Meta, StoryObj} from "@storybook/react";
 import {fn} from "@storybook/test";
-import SocialButton from "./SocialButton.tsx";
+import SocialButton from "./SocialButton";
 import btnIcon from "../../assets/send.svg";
 import './SocialButton.scss';
 

@@ -1,6 +1,6 @@
 import {Meta, StoryObj} from "@storybook/react";
-import Header from "./Header.tsx";
-import Button from "../button/Button.tsx";
+import Header from "./Header";
+import Button from "../button/Button";
 import {fn} from "@storybook/test";
 import ButtonColors from "../button/ButtonColors";
 import HeaderActions from "./HeaderActions";

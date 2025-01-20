@@ -1,5 +1,5 @@
 import {Meta, StoryObj} from "@storybook/react";
-import Accordion from "./Accordion.tsx";
+import Accordion from "./Accordion";
 
 
 const meta : Meta = {

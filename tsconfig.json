@@ -1,18 +1,21 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
   "include": ["src", ".storybook"],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "allowSyntheticDefaultImports": false,
     "esModuleInterop": true,
     "baseUrl": ".",
     "moduleResolution": "Node",
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "jsx": "react-jsx",
-    "types": ["jest", "node", "@testing-library/jest-dom"]
+    "types": ["jest", "node", "@testing-library/jest-dom"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true
   }
 }

@@ -1,5 +1,5 @@
 import {Meta, StoryObj} from "@storybook/react";
-import RatingStars, {RATING_STARS} from "./RatingStars.tsx";
+import RatingStars, {RATING_STARS} from "./RatingStars";
 
 const meta : Meta = {
     title : 'Rating Stars',

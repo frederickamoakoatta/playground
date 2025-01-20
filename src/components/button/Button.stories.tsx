@@ -1,5 +1,5 @@
 import {Meta, StoryObj} from "@storybook/react";
-import Button from "./Button.tsx";
+import Button from "./Button";
 import {fn} from "@storybook/test";
 import ButtonColors from "./ButtonColors";
 
