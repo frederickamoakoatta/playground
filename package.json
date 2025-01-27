@@ -2,7 +2,7 @@
   "name": "playground",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/frederickamoakoatta/playground/",
+  "homepage": "https://frederickamoakoatta.github.io/playground/",
   "type": "module",
   "scripts": {
     "dev": "vite",
