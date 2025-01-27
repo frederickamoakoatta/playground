@@ -5,7 +5,6 @@ interface BadgeProps {
 }
 
 const Badge = ({ text }: BadgeProps) => {
-
     return <span className="badge">{text}</span>;
 };
 
