@@ -23,11 +23,11 @@ const Header = ({mode, hasActions, navActions, navItems}: HeaderProps) => {
                 </Link>
                 <nav className="nav">
                     {navItems.map((item, i) => typeof item === 'string' ?
-                        <a href="#" style={{color : mode === 'white' ? colorPallet.textDark : colorPallet.textWhite}} key={`nav_${i}`}>{item}</a> : item)}
+                        <Link to="#" className={mode === 'white' ? 'nav-link-dark' : 'nav-link-light'} key={`nav_${i}`}>{item}</Link> : item)}
                 </nav>
                 {
                     hasActions &&
-                    <div className="h-stack" aria-label={'actions'}>
+                    <div className="nav-actions" aria-label={'actions'}>
                         {navActions}
                     </div>
                 }

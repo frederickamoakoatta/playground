@@ -1,8 +1,36 @@
 @use 'sass:map';
 @use '../../variables' as vars;
-@use '../../general';
+@use '../../general' as general;
 
-.hero {
+
+.heroA {
+  @extend .h-stack;
   padding: 0 150px;
-  margin-top: -3em;
+
+  @media (max-width: vars.$mobile-breakpoints) {
+    @include general.stack(column, center);
+    padding: 0 50px;
+    margin-top: 20px;
+  }
+
+  &-left {
+    flex: 1;
+    @media (max-width: vars.$mobile-breakpoints) {
+      @include general.stack(column, center);
+      align-items: stretch;
+      margin-top: 2em;
+    }
+
+    h1, h6, p {
+      @media (max-width: vars.$mobile-breakpoints) {
+        text-align: center;
+      }
+    }
+  }
+
+  &-right {
+    flex: 1;
+  }
+
 }
+

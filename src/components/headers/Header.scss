@@ -3,63 +3,88 @@
 @use "../../general";
 
 .header {
-    @extend .h-stack;
-    justify-content: space-between;
-    padding: 30px 150px;
+  @extend .h-stack;
+  justify-content: space-between;
+  padding: 30px 150px;
+
+  @media (max-width: vars.$mobile-breakpoints) {
+    padding: 40px 50px;
+  }
 }
 
 .logo {
-    width: 80px;
+  width: 80px;
+
+  @media (max-width: vars.$mobile-breakpoints) {
+    width: 100px;
+  }
 }
 
 .nav {
-    @extend .h-stack;
-    gap: 20px;
-    justify-content: center;
-}
+  @extend .h-stack;
+  gap: 20px;
+  justify-content: center;
 
-.nav a {
+  &-link-dark {
     color: map.get(vars.$text-colors, black);
+    cursor: pointer;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
+
+    &:hover {
+      color: map.get(vars.$text-colors, primary);
+    }
+  }
+
+  &-link-light {
+    color: map.get(vars.$text-colors, white);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: map.get(vars.$text-colors, primary);
+    }
+  }
+
+  @media (max-width: vars.$mobile-breakpoints) {
+    display: none;
+  }
 }
 
-.nav a:hover {
-    color: map.get(vars.$text-colors, primary);
-}
 
 .menu-toggle {
-    display: none;
+  display: none;
+
+  @media (max-width: vars.$mobile-breakpoints) {
+    display: block;
+    cursor: pointer;
+    font-size: 2.5em;
+    color: map.get(vars.$colors, black);
+  }
 }
 
 .header-icons {
-    width: map.get(vars.$ptn-grid, '24pt');
+  width: map.get(vars.$ptn-grid, '24pt');
 }
 
 .header-avatar {
-    width: map.get(vars.$ptn-grid, '32pt');
-    height: map.get(vars.$ptn-grid, '32pt');
-    border-radius: 50%;
-    object-fit: cover;
+  width: map.get(vars.$ptn-grid, '32pt');
+  height: map.get(vars.$ptn-grid, '32pt');
+  border-radius: 50%;
+  object-fit: cover;
 }
-
-@media (max-width: 768px) {
-    .nav {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 1.5rem;
-        color: map.get(vars.$colors, black);
-    }
-}
-
 
 .btn-v-stack {
-    @extend .v-stack;
-    align-items: flex-start;
-    margin:  0;
+  @extend .v-stack;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.nav-actions {
+  @media (max-width: vars.$mobile-breakpoints) {
+    display: none;
+  }
 }
