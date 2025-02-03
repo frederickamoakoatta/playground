@@ -10,12 +10,22 @@
 .pricing {
   @extend .v-stack;
   padding: 0 150px;
-  margin: 4em 0;
+  margin: 2em 0;
+
+  @media (max-width: vars.$mobile-breakpoints) {
+    padding: 0 50px 40px 50px;
+  }
 }
 
 .card-group {
   @extend .h-stack;
   justify-content: space-evenly;
   width: 100%;
+  gap: 2em;
+
+  @media (max-width: vars.$mobile-breakpoints) {
+    flex-wrap: wrap;
+  }
+
 }
 

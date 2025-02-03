@@ -14,7 +14,7 @@ const LoginB = () => {
                     <br/>
                     <h6>Sign In</h6>
                     <br/>
-                    <div className="form">
+                    <div className="formB">
                         <Input className="form-element" type={'email'} label={'Email Address'}/>
                         <br/>
                         <Input className="form-element" type={'password'} label={'Password'}/>
@@ -22,7 +22,7 @@ const LoginB = () => {
                         <Button state={ButtonColors.primary} isFullWidth>Login</Button>
                     </div>
                     <br/>
-                    <div className="form-bottom">
+                    <div className="formB-bottom">
                         <Checkbox label={'Remember me'} hasLabel/>
                         <small>Forget Password?</small>
                     </div>

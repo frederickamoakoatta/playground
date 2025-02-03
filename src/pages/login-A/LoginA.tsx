@@ -5,13 +5,15 @@ import Input from "../../components/input/Input";
 import ministryLogo from "../../assets/ministryLogo.jpeg";
 import Checkbox from "../../components/checkbox/Checkbox";
 
+
 const LoginA = () => {
     return (
         <>
             <section aria-label={'login'} className="login-A">
                 <div className="login-A-left"/>
                 <div className="login-A-right">
-                    <img src={ministryLogo} width={'100px'} height={'100px'}  alt={'Agriculture Ministry Logo'} />
+                    <img src={ministryLogo} width={'80px'} height={'80px'} alt={'Agriculture Ministry Logo'}/>
+                    <br/>
                     <h4>Welcome to Farmers Grant Portal</h4>
                     <p>Sign In</p>
                     <br/>

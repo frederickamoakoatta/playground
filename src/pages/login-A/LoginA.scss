@@ -6,6 +6,7 @@
   @extend .h-stack;
   margin : 0;
   width : 100%;
+  box-sizing: border-box;
 
   &-left {
     background-image: url('../../assets/loginbackground2.jpg');;
@@ -13,12 +14,23 @@
     background-position: center;
     width: 50vw;
     height: 100vh;
+
+    @media (max-width: vars.$mobile-breakpoints) {
+      display: none;
+    }
   }
 
   &-right {
     @extend .v-stack;
     width: 50vw;
     padding : 4em;
+    box-sizing: border-box;
+
+    @media (max-width: vars.$mobile-breakpoints) {
+      width: 100%;
+      padding : 0;
+      height: 100vh;
+    }
   }
 }
 

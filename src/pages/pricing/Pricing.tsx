@@ -2,7 +2,8 @@ import Header from "../../components/headers/Header";
 import "./Pricing.scss";
 import Toggle from "../../components/toogle/Toggle";
 import PriceCard from "../../components/price-card/PriceCard";
-import {useMemo} from "react";
+import {useMemo, useState} from "react";
+import Footer from "../../components/footer/Footer";
 
 
 const Pricing = () => {
@@ -16,6 +17,8 @@ const Pricing = () => {
         ]
     }, []);
 
+    const [toggle, setToggle] = useState<boolean>(false);
+
     return (
         <>
             <Header mode={'white'} navItems={['Home', 'Phones', 'Accessories', 'Contact']} hasActions={false}/>
@@ -26,7 +29,7 @@ const Pricing = () => {
                     <div className={'h-stack'}>
                         <strong>Monthly</strong>
                         <span className={'spaceBtw'}/>
-                        <Toggle/>
+                        <Toggle defaultVal={toggle} setDefaultVal={setToggle} />
                         <span className={'spaceBtw'}/>
                         <span>Yearly</span>
                     </div>
@@ -34,11 +37,12 @@ const Pricing = () => {
                 <br/>
                 <br/>
                 <div className="card-group">
-                    <PriceCard name={'Free'} price={'$0'} duration={'month'} features={features}/>
-                    <PriceCard name={'Pro'} price={'$24'} duration={'month'} features={features} isRecommended/>
-                    <PriceCard name={'Enterprise'} price={'$99'} duration={'month'} features={features}/>
+                    <PriceCard name={'Free'} price={'$0'} duration={toggle ? 'yearly': 'month' } features={features}/>
+                    <PriceCard name={'Pro'} price={toggle ? '$250' : '$24'} duration={toggle ? 'yearly': 'month' } features={features} isRecommended/>
+                    <PriceCard name={'Enterprise'} price={toggle ? '980': '$99'} duration={toggle ? 'yearly': 'month' } features={features}/>
                 </div>
             </section>
+            <Footer/>
         </>
     )
 }

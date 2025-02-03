@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use '../../variables' as vars;
+@use '../../general';
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  //background-color: #222;
+  background-color: map.get(vars.$colors, dark);
+  color: #fff;
+  bottom: 0;
+  position: fixed;
+  box-sizing: border-box;
+
+}

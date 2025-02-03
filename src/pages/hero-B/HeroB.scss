@@ -2,8 +2,15 @@
 @use '../../variables' as vars;
 @use '../../general';
 
-.hero {
+.heroB {
+  @extend .v-stack;
   padding: 50px 150px;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+  @media (max-width: vars.$mobile-breakpoints) {
+    padding: 0 50px;
+  }
 }
 
 .hero-heading-white {
@@ -12,4 +19,27 @@
 
 .hero-subtitle {
   color: map.get(vars.$colors, white);
+}
+
+
+.imgA {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.imgB {
+  width: 100%;
+  display: none;
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: vars.$mobile-breakpoints) {
+  .imgA {
+    display: none;
+  }
+  .imgB {
+    display: block;
+  }
 }

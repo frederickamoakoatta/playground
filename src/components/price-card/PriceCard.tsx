@@ -14,7 +14,7 @@ interface FeatureProps {
 interface PricingCardProps {
     name: string,
     price: string,
-    duration: 'month' | 'year',
+    duration: 'month' | 'yearly',
     features: Array<FeatureProps>,
     isRecommended ?: boolean,
 }

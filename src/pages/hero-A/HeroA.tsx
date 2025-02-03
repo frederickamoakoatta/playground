@@ -5,11 +5,12 @@ import Button from "../../components/button/Button";
 import ButtonColors from "../../components/button/ButtonColors";
 import alien from "../../assets/alien.png";
 import LazyLoad from "react-lazyload"
+import Footer from "../../components/footer/Footer";
 
 
 const HeroA = () => {
     return (
-        <>
+            <>
             <Header mode={'white'} navItems={['Home', 'Space station', 'Our planets', 'Contact']} hasActions={true} navActions={<HeaderActions actionType={'style3'}/>}/>
             <section aria-label={'Hero'} className="heroA">
                 <div className="heroA-left">
@@ -25,7 +26,8 @@ const HeroA = () => {
                 <img src={alien} alt={'Alien and human 3D illustration'} width={'100%'}/>
                 </LazyLoad>
             </section>
-        </>
+                <Footer/>
+            </>
     )
 }
 export default HeroA;

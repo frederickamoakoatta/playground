@@ -1,169 +1,80 @@
-# Storybook Playground
+# Playground Project
 
-## Overview
+## 📌 Project Overview
+Playground is a personal project aimed at showcasing my expertise in building React components, testing them using React Testing Library (RTL), and documenting them with Storybook. Additionally, this project is deployed using Vercel for easy access and demonstration.
 
-This project is a playground for building, testing, and documenting UI components using [Storybook](https://storybook.js.org/). It serves as a collaborative space for developers and designers to prototype, refine, and showcase reusable components.
+## 🚀 Technologies Used
+- **React (Vite)** – Fast and lightweight React development environment.
+- **Storybook** – Component-driven development for building and testing UI components.
+- **SCSS** – Modular and maintainable styling with advanced CSS features.
+- **React Testing Library (RTL)** – Ensuring component reliability through unit and integration tests.
+- **Vercel** – Hosting and deploying the project efficiently.
 
-## Features
+## 🛠️ Getting Started
 
-- **Component Development**: Develop isolated UI components without dependency on the main application.
-- **Live Documentation**: Automatically generate interactive documentation for each component.
-- **Testing**: Ensure components work as expected using tools like Jest and Chromatic.
-- **Theming Support**: Experiment with multiple themes to ensure design consistency.
-- **Accessibility**: Test components for accessibility using Storybook's built-in tools.
+### 1️⃣ Setting Up the Project
+To set up the project locally, follow these steps:
 
-## Prerequisites
-
-- Node.js (>= 16)
-- npm or Yarn
-
-## Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/storybook-playground.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd storybook-playground
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-   or
-
-   ```bash
-   yarn install
-   ```
-
-## Usage
-
-### Starting Storybook
-
-To launch Storybook in development mode, run:
-
-```bash
-  npm run storybook
+#### **Install Vite** (if not installed already)
+```sh
+npm create vite@latest playground --template react
+```
+OR using Yarn:
+```sh
+yarn create vite@latest playground --template react
 ```
 
-or
-
-```bash
-  yarn storybook
+#### **Navigate into the Project Folder**
+```sh
+cd playground
 ```
 
-This will start a local development server, typically accessible at [http://localhost:6006](http://localhost:6006).
-
-### Adding Components
-
-1. Create a new directory under `src/components` for your component.
-2. Implement your component in a `.jsx` or `.tsx` file.
-3. Add a `.stories.jsx` or `.stories.tsx` file in the same directory to define the Storybook stories for your component.
-
-Example of a simple story:
-
-```jsx
-import React from 'react';
-import { Button } from './Button';
-
-export default {
-  title: 'Example/Button',
-  component: Button,
-};
-
-const Template = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  label: 'Primary Button',
-  variant: 'primary',
-};
+#### **Install Dependencies**
+```sh
+npm install
+```
+OR using Yarn:
+```sh
+yarn install
 ```
 
-### Building Components
+### 2️⃣ Running the Development Server
+```sh
+npm run dev
+```
+This will start the Vite dev server, and you can access your app at `http://localhost:5173/`
 
-To build your components for production:
+### 3️⃣ Running Storybook
+```sh
+npm run storybook
+```
+Storybook will open in your browser, allowing you to visualize and test your components in isolation.
 
-```bash
-  npm run build
+### 4️⃣ Running Tests (React Testing Library)
+```sh
+npm run test
+```
+Runs all unit and integration tests to validate component behavior.
+
+## 📤 Deployment
+The project is hosted on **Vercel**. To manually trigger a deployment, run:
+```sh
+vercel --prod
 ```
 
-or
+Alternatively, if connected to GitHub, pushing changes to the `main` branch will automatically trigger a new deployment.
 
-```bash
-  yarn build
-```
+## 📚 Additional Information
+- Ensure **SCSS** files are properly structured for modular styling.
+- Use **Storybook** to visualize and document each component.
+- Write comprehensive tests using **React Testing Library** to maintain reliability.
 
-This will output a static version of your Storybook under the `storybook-static` directory.
+## 🎯 Future Enhancements
+- Improve test coverage.
+- Optimize component performance.
+- Add some relevant UI states like hovers to buttons
+- Add more reusable UI components.
 
-### Testing Components
+---
+📌 **Created & Maintained by Frederick Amoako-Atta**
 
-Run unit tests:
-
-```bash
-  npm tests
-```
-
-or
-
-```bash
-  yarn tests
-```
-
-For visual regression testing with Chromatic:
-
-```bash
-  npx chromatic --project-token=<your-chromatic-project-token>
-```
-
-## Project Structure
-
-```
-storybook-playground/
-├── .storybook/          # Storybook configuration
-├── src/
-│   ├── components/  # Component implementations
-│   └── stories/     # Additional example stories
-├── public/           # Static assets
-├── package.json
-└── README.md
-```
-
-## Contributing
-
-1. Fork the repository and create a new branch:
-
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-2. Make your changes and commit them:
-
-   ```bash
-   git commit -m 'Add your message here'
-   ```
-
-3. Push to your branch:
-
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-4. Open a pull request.
-
-## Resources
-
-- [Storybook Documentation](https://storybook.js.org/docs)
-- [Chromatic](https://www.chromatic.com/)
-- [Jest](https://jestjs.io/)
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.

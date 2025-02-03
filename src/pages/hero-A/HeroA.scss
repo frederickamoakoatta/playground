@@ -6,6 +6,8 @@
 .heroA {
   @extend .h-stack;
   padding: 0 150px;
+  width: 100%;
+  box-sizing: border-box;
 
   @media (max-width: vars.$mobile-breakpoints) {
     @include general.stack(column, center);
@@ -18,7 +20,6 @@
     @media (max-width: vars.$mobile-breakpoints) {
       @include general.stack(column, center);
       align-items: stretch;
-      margin-top: 2em;
     }
 
     h1, h6, p {
