@@ -2,12 +2,10 @@
   "name": "playground",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://frederickamoakoatta.github.io/playground",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "predeploy": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -15,7 +13,6 @@
     "test": "jest --config jest.config.ts"
   },
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "punycode": "^2.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

@@ -9,6 +9,6 @@ export default defineConfig({
     outDir: 'dist',
   },
   server: {
-    host: true,
+    historyApiFallback: true, // For development
   },
 })
