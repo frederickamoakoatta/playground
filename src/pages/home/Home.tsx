@@ -15,11 +15,11 @@ const Home = () => {
     const [selectedURL, setSelectedURL] = useState<SingleValue<LinksType>>({label:'-- Select demo page --', value:''});
     const options : Array<LinksType> =  useMemo(() => {
         return [
-            { value: '/hero-1', label: 'Hero page 1' },
-            { value: '/hero-2?theme=dark', label: 'Hero page 2' },
-            { value: '/pricing', label: 'Pricing page' },
             { value: '/login-1', label: 'Login page 1' },
             { value: '/login-2', label: 'Login page 2' },
+            { value: '/pricing', label: 'Pricing page' },
+            { value: '/hero-1', label: 'Hero page 1' },
+            { value: '/hero-2?theme=dark', label: 'Hero page 2' }
         ]
     }, []);
     return (
@@ -35,6 +35,7 @@ const Home = () => {
                                 width: "250px", // Set the width here
                             }),
                         }}
+                        isSearchable={false}
                         defaultValue={selectedURL}
                         onChange={(val) => setSelectedURL(val)}
                         options={options}
