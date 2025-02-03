@@ -1,6 +1,7 @@
 import './App.scss'
 import {Routes, Route} from "react-router-dom";
 import {lazy, Suspense} from "react";
+import Loader from "./components/loader/Loader";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const HeroA = lazy(() => import("./pages/hero-A/HeroA"));
@@ -14,7 +15,7 @@ const App = () => {
 
     return (
         <>
-            <Suspense fallback={<h1>Loading</h1>}>
+            <Suspense fallback={<Loader/>}>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/hero-1" element={<HeroA/>}/>

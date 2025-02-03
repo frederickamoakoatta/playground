@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use '../../variables' as vars;
+@use '../../general';
+
+.loader {
+  @extend .v-stack;
+  width: 100wh;
+  height: 100vh;
+  box-sizing: border-box;
+}
